@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meeting Results</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            background:#f4f6f9;
+            padding:40px;
+        }
+
+        .card{
+            background:white;
+            padding:25px;
+            margin-bottom:20px;
+            border-radius:12px;
+            box-shadow:0 4px 10px rgba(0,0,0,.1);
+        }
+
+        h2{
+            color:#2563eb;
+        }
+
+        li{
+            margin:8px 0;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>🤖 AI Meeting Intelligence Platform</h1>
+
+<div class="card">
+
+<h2>Transcript</h2>
+
+<p>{{ transcript }}</p>
+
+</div>
+
+<div class="card">
+
+<h2>Summary</h2>
+
+<p>{{ summary }}</p>
+
+</div>
+
+<div class="card">
+
+<h2>Key Points</h2>
+
+<ul>
+
+{% for point in key_points %}
+
+<li>{{ point }}</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Action Items</h2>
+
+<ul>
+
+{% for item in action_items %}
+
+<li>{{ item }}</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Next Steps</h2>
+
+<ul>
+
+{% for step in next_steps %}
+
+<li>{{ step }}</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+</body>
+</html>

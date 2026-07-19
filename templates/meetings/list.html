@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meetings</title>
+</head>
+
+<body>
+
+<h2>AI Meeting Intelligence Platform</h2>
+
+<a href="/meetings/upload/">Upload Meeting</a>
+
+<hr>
+
+{% for meeting in meetings%}
+
+<h3>{{ meeting.title }}</h3>
+
+<b>Transcript</b>
+
+<p>{{ meeting.transcript }}</p>
+
+<b>Summary</b>
+
+<p>{{ meeting.summary }}</p>
+
+<b>Action Items</b>
+
+<pre>{{ meeting.action_items }}</pre>
+
+<hr>
+
+{% endfor %}
+
+</body>
+</html>

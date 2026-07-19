@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <h1 class="text-center fw-bold mb-5">
+
+        🤖 AI Meeting Analysis
+
+    </h1>
+
+    <div class="result-card">
+
+        <h3 class="result-title">
+
+            📄 Meeting Transcript
+
+        </h3>
+
+        <p>
+
+            {{ transcript }}
+
+        </p>
+
+    </div>
+
+    <div class="result-card">
+
+        <h3 class="result-title">
+
+            📝 AI Summary
+
+        </h3>
+
+        <p>
+
+            {{ summary }}
+
+        </p>
+
+    </div>
+
+    <div class="result-card">
+
+        <h3 class="result-title">
+
+            📌 Key Discussion Points
+
+        </h3>
+
+        <ul>
+
+            {% for point in key_points %}
+
+            <li>{{ point }}</li>
+
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+    <div class="result-card">
+
+        <h3 class="result-title">
+
+            ✅ Action Items
+
+            <div class="result-card">
+
+    <h3 class="result-title">
+
+        🎯 Next Steps
+
+    </h3>
+
+    <ul>
+
+        {% for step in next_steps %}
+
+            <li>{{ step }}</li>
+
+        {% endfor %}
+
+    </ul>
+
+</div>
+
+        </h3>
+
+        <ul>
+
+            {% for item in action_items %}
+
+            <li>{{ item }}</li>
+
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+</div>
+
+{% endblock %}
